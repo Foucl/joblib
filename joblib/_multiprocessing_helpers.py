@@ -13,7 +13,7 @@ import warnings
 mp = int(os.environ.get('JOBLIB_MULTIPROCESSING', 1)) or None
 if mp:
     try:
-        import multiprocessing as mp
+        import multiprocess as mp
     except ImportError:
         mp = None
 
@@ -32,8 +32,8 @@ if mp is not None:
 if mp is not None:
     try:
         # Python 3.4+
-        from multiprocessing.context import assert_spawning
+        from multiprocess.context import assert_spawning
     except ImportError:
-        from multiprocessing.forking import assert_spawning
+        from multiprocess.forking import assert_spawning
 else:
     assert_spawning = None
