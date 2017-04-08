@@ -13,6 +13,7 @@ from .format_stack import format_exc
 from .my_exceptions import WorkerInterrupt, TransportableException
 from ._multiprocessing_helpers import mp
 from ._compat import with_metaclass
+import multiprocess as multiprocessing
 if mp is not None:
     from .pool import MemmapingPool
     from multiprocessing.pool import ThreadPool
