@@ -50,7 +50,7 @@ from io import BytesIO
 from ._multiprocessing_helpers import mp, assert_spawning
 # We need the class definition to derive from it not the multiprocessing.Pool
 # factory function
-from multiprocessing.pool import Pool
+from multiprocess.pool import Pool
 
 try:
     import numpy as np
